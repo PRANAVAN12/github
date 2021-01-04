@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>QR+6
+        0
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../lib/jquery.mobile-1.4.5.min.css"/>
+    <script src="../lib/jquery-1.11.1.min.js"></script>
+    <script src="../lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://kit.fontawesome.com/2d990cff29.js" crossorigin="anonymous"></script>
+    <script src="../js/common.js"></script>
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
+    <script>
+        function goToMessage() {
+            document.location.href = "./message.html";
+        }
+    </script>
+    <style>
+        .header-bar {
+            background-color: #861657;
+background-image: linear-gradient(326deg, #861657 0%, #ffa69e 74%);
+
+    height: 60px !important;
+}
+        .header-bar .page-detail {
+            color: white;
+            letter-spacing: 2px;
+            font-weight: 100;
+            font-size: 17px;
+            margin-top: 8px;
+        }
+
+        .footerBtn .ui-btn {
+            line-height: 2.3 !important;
+            font-family: sans-serif;
+            font-size: 15px !important;
+            background-color: white !important;
+            border-left-width: 0px !important;
+            border-right-width: 0px !important;
+            border-top-width: 0px !important;
+            border-bottom-width: 0px !important;
+        }
+
+        .footerBtn .ui-btn-active {
+            background-color: white !important;
+            color: rgb(21, 98, 146) !important;
+            text-shadow: none !important;
+            border-color: transparent !important;
+            border-left-width: 0px !important;
+            border-right-width: 0px !important;
+            border-top-width: 0px !important;
+            border-bottom-width: 0px !important;
+            text-shadow: none !important;
+            box-shadow: none !important;
+        }
+
+        .pro-image {
+    width: 73px;
+    height: 72px;
+    border-radius: 11%;
+    overflow: hidden;
+    margin-top: 21px;
+    margin-left: 14px;
+}
+
+.headmsg{
+    margin-top: 27px !important;
+}
+.ui-listview>li p {
+    font-size: 0.85em !important;
+    font-weight: 410 !important;
+   
+    font-family: fangsong;
+    margin: -1.08em 0 !important;
+}
+
+.ui-listview>li h1, .ui-listview>li h2, .ui-listview>li h3, .ui-listview>li h4, .ui-listview>li h5, .ui-listview>li h6 {
+    font-size: 1.2em;
+    font-weight: 700;
+    display: block;
+    margin: .45em 0;
+    font-family: 'Font Awesome 5 Free';
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.qr{
+    margin: 4rem;
+}
+.qr-code {
+    max-width: 200px;
+    /* margin: 17px; */
+    /* padding: 96px; */
+    margin-left: 112px;
+    margin-top: 161px;
+}
+
+.button2 {
+    background-color: #7f53ac;
+    background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+    color: wheat;
+    color: white !important;
+    font-size: 16px!important;
+    font-weight: 100;
+
+  
+}
+.button3 {
+    background-color: #89d4cf;
+    background-image: linear-gradient(315deg, #89d4cf 0%, #6e45e1 74%);
+    color: wheat;
+    color: white !important;
+    font-size: 16px!important;
+    font-weight: 100;
+
+  
+}
+#container{
+    text-align: center;
+}
+.ui-input-text{
+    border-style: none;
+}
+.buttonsw {
+    width: 250px;
+    margin-left: 72px;
+    margin-top: 38px;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+}
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+    </style>
+</head>
+
+<body>
+<div data-role="header" data-position="fixed" class="header-bar">
+    <h1 class="page-detail"> Scan QR</h1>
+</div>
+<div class="container-fluid">
+    <div class="text-center">
+      <img src="https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=160x160&chld=L|0"
+           class="qr-code img-thumbnail img-responsive">
+    </div>
+    <div class="buttonsw">
+        <button class="button2">Scan</button>
+        <div class="upload-btn-wrapper">
+            <button class="button3">Upload a file</button>
+            <input type="file" name="myfile" />
+          </div> 
+    </div>
+ 
+   
+  </div>
+<div data-role="footer" data-position="fixed" role="banner">
+    <div data-role="navbar" class="nav-glyphish-example footerBtn" data-grid="d"
+         style="height: 32px !important; margin: 0 0;">
+        <ul>
+            <li><a onclick="home()" data-icon=""><i class="fi-xnluxx-home"></i></a></li>
+            <li><a onclick="favourite()" href="#" data-icon=""><i class="fi-xnluxx-heart"></i></a></li>
+
+            <li><a href="#" class="ui-btn-active" data-icon=""><i class="fi-xwluxx-comment-dots-solid"></i></a>
+            </li>
+            <li><a onclick="cart()" href="#" data-icon=""><i class="fi-xnluhx-shopping-cart"></i></a>
+            </li>
+            <li><a onclick="profile()" href="#" data-icon=""><i class="fi-xnluxl-user"></i></a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+<script>
+
+
+
+
+
+
+</script>

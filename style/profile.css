@@ -1,0 +1,209 @@
+.header-bar {
+	background-color: rgb(12, 64, 161) !important; height: 60px !important;
+}
+
+.header-bar .back-icon {
+	float: left;
+	margin-top: 22px;
+	margin-left: 15px;
+	color: white;
+}
+
+.header-bar .page-detail {
+	color: white;
+	letter-spacing: 2px;
+	font-weight: 100;
+	font-size: 17px;
+	margin-top: 8px;
+    text-shadow: none;
+}
+
+.content-body {
+    background-color: rgb(245, 245, 245) !important;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    /* border: 1px solid rgb(224, 240, 253) !important; */
+}
+
+.name-tab {
+    height: 85px;
+    margin-bottom: 10px;
+    padding: 4px 12px;
+    background-color: rgb(255, 255, 255);
+    margin: 0px auto;
+    border: 1px solid rgb(224, 240, 253) !important;
+}
+
+.profile-icon {
+    width: 18%;
+    float: left;
+    font-size: 59px;
+    padding: 10px;
+    margin-top: 2px;
+    color: rgb(201, 200, 200);
+}
+
+.info {
+    /* width: 60%; */
+}
+
+.user-name {
+    font-size: 21px;
+    float: left;
+    margin-top: 28px;
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+
+.email-display {
+
+}
+
+.detail-tab {
+    height: 15px;
+}
+
+.nav {
+    height: 10px;
+    font-size: 12px;
+}
+
+.arrow-icon {
+    float: right;
+    margin-top: 28px;
+    font-size: 25px;
+    color: slategray;
+}
+
+.arrow-icon:hover {
+    color: rgb(11, 79, 168) !important;
+}
+
+.personal-tab-arrow:hover {
+    color: rgb(11, 79, 168) !important;
+}
+
+
+/* personal data */
+
+.personal-tab {
+    width: 25%;
+    float: left;
+    font-size: 15px;
+}
+
+.personal-info {
+    float: right;
+    font-size: 15px;
+    color: slategray;
+    margin-right: 4px;
+}
+
+.personal-tab-arrow {
+    margin-top: -25px;
+    float: right;
+    color: slategray;
+}
+
+
+/* profile-navbar */
+
+.profile-nav {
+    margin-top: -3px;
+    width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 255, 255) !important;
+}
+
+a {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid rgb(224, 240, 253) !important;
+}
+
+/* a:hover {
+    background-color: steelblue !important;
+    color: white !important;
+    border-color: none !important;
+    border: none !important;
+} */
+
+/* a:active {
+    background-color: white !important;
+    color: black !important;
+    border-color: white !important;
+    border: none !important;
+} */
+
+
+/* other details */
+
+.shop-detail {
+    width: 10%;
+    float: left;
+    color: slategray;
+}
+
+.shopping-info {
+    float: left;
+    font-size: 14px;
+}
+
+.shop-detail-tab {
+    margin-top: 60px;
+}
+
+/* navigation bar */
+
+.ui-btn {
+    line-height: 2.3 !important;
+    font-family: sans-serif;
+    font-size: 15px !important;
+	background-color: white !important;
+	border-left-width: 0px !important;
+    border-right-width: 0px !important;
+    border-top-width: 0px !important;
+    border-bottom-width: 0px !important;
+}
+
+.ui-btn-active {
+    background-color: white !important;
+    color: rgb(21, 98, 146) !important;
+    text-shadow: none !important;
+	border-color: transparent !important;
+	border-left-width: 0px !important;
+    border-right-width: 0px !important;
+    border-top-width: 0px !important;
+    border-bottom-width: 0px !important;
+	box-shadow: none !important;
+}
+
+.fa-user-circle {
+    color: rgb(94, 94, 94) !important;
+    text-align: center !important;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    font-size: 60px;
+}
+
+@media all and (min-width: 40em) {
+    .grid-ui-a {
+        width: 97%;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+    }
+}
+
+.dont-hv-acc {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 50px;
+    font-weight: 100;
+}

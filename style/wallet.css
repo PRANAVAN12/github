@@ -1,0 +1,34 @@
+#carddetails {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    vertical-align: top;
+}
+#rightThing {
+    width: 10%;
+}
+#content {
+    width: 60%;
+}
+#leftThing{
+    width: 30%;
+}
+.header-bar {
+    background-color: rgb(12, 64, 161) !important;
+    height: 60px !important;
+}
+
+.header-bar .back-icon {
+    float: left;
+    margin-top: 22px;
+    margin-left: 15px;
+    color: white;
+}
+
+.header-bar .page-detail {
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 100;
+    font-size: 17px;
+    margin-top: 8px;
+}
