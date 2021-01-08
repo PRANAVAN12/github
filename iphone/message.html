@@ -1,175 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Reviews</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../lib/jquery.mobile-1.4.5.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../lib/jquery.mobile-1.4.5.min.css" />
     <script src="../lib/jquery-1.11.1.min.js"></script>
     <script src="../lib/jquery.mobile-1.4.5.min.js"></script>
-    <script src="https://kit.fontawesome.com/2d990cff29.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/2d990cff29.js"
+      crossorigin="anonymous"
+    ></script>
     <script>
-        function goToMessages() {
-            document.location.href = "./messages.html";
+      function goToMessages() {
+        document.location.href = "./messages.html";
+      }
+      var is_color = false;
+      function addMessages() {
+        var parentEl = document.getElementById("mainPage");
+        var para = document.createElement("P");
+        var div = document.createElement("div");
+        var mess = document.getElementById("mess").value;
+        div.style.width = "920px";
+        div.style.height = "70px";
+        debugger;
+        if (this.is_color) {
+          div.setAttribute("class", "container darker ");
+          document.getElementById('mess').value=""
+        } else {
+          div.setAttribute("class", "container light");
+          document.getElementById('mess').value=""
         }
+         this.is_color = !this.is_color;
+        para.innerHTML = mess;
+        div.appendChild(para);
+        parentEl.appendChild(div);
+        element.appendChild(t);
+        console.log("enddd", parentEl);
+      }
     </script>
     <style>
-        .header-bar {
-            background-image: linear-gradient(175deg, #861657 28%, #ffa69e 85%);
-            height: 60px !important;
+      .header-bar {
+        background-image: linear-gradient(175deg, #861657 28%, #ffa69e 85%);
+        height: 60px !important;
+      }
+
+      .header-bar .back-icon {
+        float: left;
+        margin-top: 22px;
+        margin-left: 15px;
+        color: white;
+      }
+
+      .header-bar .page-detail {
+        color: white;
+        letter-spacing: 2px;
+        font-weight: 100;
+        font-size: 17px;
+        margin-top: 8px;
+        text-shadow: none;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #textareaQA {
+        height: 36px !important;
+      }
+
+      #askBtn {
+        border-radius: 20px;
+        margin-top: 8px;
+        background-color: #861657 !important;
+        color: white;
+        text-shadow: none;
+      }
+      .ui-grid-a > .ui-block-a {
+        width: 75%;
+        margin-left: 10px;
+      }
+      .ui-grid-a > .ui-block-b {
+        width: 15%;
+      }
+
+      /* Chat containers */
+      .container {
+        border: 2px solid linear-gradient(175deg, #861657 0%, #ffa69e 85%);
+        background-image: linear-gradient(360deg, #861657 0%, #ffa69e 85%);
+        color: white;
+        text-shadow: none;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 5px;
+      }
+
+      .light {
+        margin-left: 40%;
+      }
+
+      /* Darker chat container */
+      .darker {
+        border-color: #ccc;
+        background-image: linear-gradient(175deg, #a19c9f 0%, #d6c5c1 85%);
+        color: black;
+        text-shadow: none;
+        margin-right: 40%;
+      }
+
+      /* Clear floats */
+      .container::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      /* Style images */
+      .container img {
+        float: left;
+        max-width: 60px;
+        width: 100%;
+        margin-right: 20px;
+        border-radius: 50%;
+      }
+
+      /* Style the right image */
+      .container img.right {
+        float: right;
+        margin-left: 20px;
+        margin-right: 0;
+      }
+
+      /* Style time text */
+      .time-right {
+        float: right;
+        color: #aaa;
+      }
+
+      /* Style time text */
+      .time-left {
+        float: left;
+        color: #999;
+      }
+
+      @media all and (min-width: 40em) {
+        .ui-grid-a {
+          width: 90%;
+          font-size: larger;
+          margin: auto;
         }
 
-        .header-bar .back-icon {
-            float: left;
-            margin-top: 22px;
-            margin-left: 15px;
-            color: white;
+        #askBtn {
+          width: 100px;
+          font-size: large;
+          border-radius: 50px;
         }
-
-        .header-bar .page-detail {
-            color: white;
-            letter-spacing: 2px;
-            font-weight: 100;
-            font-size: 17px;
-            margin-top: 8px;
-            text-shadow: none;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #textareaQA{
-            height: 36px !important;
-        }
-
-        #askBtn{
-            border-radius: 20px;
-            margin-top: 8px;
-            background-color: #861657 !important;
-            color: white;
-            text-shadow: none;
-        }
-        .ui-grid-a>.ui-block-a{
-            width: 75%;
-            margin-left: 10px;
-        }
-        .ui-grid-a>.ui-block-b {
-            width: 15%;
-        }
-
-        /* Chat containers */
-        .container {
-            border: 2px solid linear-gradient(175deg, #861657 0%, #ffa69e 85%);
-            background-image: linear-gradient(360deg, #861657 0%, #ffa69e 85%);
-            color: white;
-            text-shadow: none;
-            border-radius: 20px;
-            padding: 10px;
-            margin: 5px;
-        }
-
-        .light{
-            margin-left: 40%;
-        }
-
-        /* Darker chat container */
-        .darker {
-            border-color: #ccc;
-            background-image: linear-gradient(175deg, #a19c9f 0%, #d6c5c1 85%);
-            color: black;
-            text-shadow: none;
-            margin-right: 40%;
-        }
-
-        /* Clear floats */
-        .container::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        /* Style images */
-        .container img {
-            float: left;
-            max-width: 60px;
-            width: 100%;
-            margin-right: 20px;
-            border-radius: 50%;
-        }
-
-        /* Style the right image */
-        .container img.right {
-            float: right;
-            margin-left: 20px;
-            margin-right:0;
-        }
-
-        /* Style time text */
-        .time-right {
-            float: right;
-            color: #aaa;
-        }
-
-        /* Style time text */
-        .time-left {
-            float: left;
-            color: #999;
-        }
-
-        @media all and (min-width: 40em) {
-            .ui-grid-a{
-                width: 90%;
-                font-size: larger;
-                margin: auto;
-            }
-
-            #askBtn{
-                width: 100px;
-                font-size: large;
-                border-radius: 50px;
-            }
-        }
-
+      }
     </style>
-</head>
+  </head>
 
-<body>
-<div data-role="header" data-position="fixed" class="header-bar">
-    <i class="fas fa-chevron-left back-icon" onclick="goToMessages()"></i>
-    <h1 class="page-detail">Trendy Fashion Store</h1>
-</div>
-<div data-role="content" data-theme="a">
-    <div class="container light">
+  <body>
+    <div data-role="header" data-position="fixed" class="header-bar">
+      <i class="fas fa-chevron-left back-icon" onclick="goToMessages()"></i>
+      <h1 class="page-detail">Trendy Fashion Store</h1>
+    </div>
+    <div data-role="content" id="mainPage" data-theme="a">
+      <div class="container light">
         <!--<img src="/w3images/bandmember.jpg" alt="Avatar">-->
         <p>Hello. Have you sent my product?</p>
         <span class="time-right">11:00</span>
-    </div>
+      </div>
 
-    <div class="container darker">
+      <div class="container darker">
         <!--<img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right">-->
         <p>Not yet sir, we are processing your order. Soon we will send it.</p>
         <span class="time-left">11:01</span>
+      </div>
     </div>
-
-    <div class="container light">
-        <!--<img src="/w3images/bandmember.jpg" alt="Avatar">-->
-        <p>Oh. Please send it as soon as possibble.</p>
-        <span class="time-right">11:02</span>
-    </div>
-
-    <div class="container darker">
-        <!--<img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right">-->
-        <p>Sure sir, We will do our best.</p>
-        <span class="time-left">11:05</span>
-    </div>
-</div>
-<div data-role="footer" data-position="fixed" role="banner">
-    <div class="ui-grid-a">
+    <div data-role="footer" data-position="fixed" role="banner">
+      <div class="ui-grid-a">
         <div class="ui-block-a">
-            <input type="text" id="url" name="url" placeholder="Tell us about what you think ..."/>
+          <input
+            type="text"
+            id="mess"
+            name="url"
+            placeholder="Tell us about what you think ..."
+          />
         </div>
         <div class="ui-block-b">
-            <button id="askBtn" data-inline="true" class="ui-btn">Send</button>
+          <button
+            id="askBtn"
+            data-inline="true"
+            onclick="addMessages()"
+            class="ui-btn"
+          >
+            Send
+          </button>
         </div>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>
